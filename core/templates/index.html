@@ -1,0 +1,474 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Expyog{% endblock title %}    
+
+{% block content %}
+    <!-- main start -->
+    <main id="swup">
+
+        <!-- to-top-button start -->
+        <a href="#firstSection" class="to-top-button to-id click-target">
+            <i class="icon-arrow-left"></i>
+        </a>
+        <!-- to-top-button end -->
+
+
+        <!-- header start -->
+        {% include 'navbar.html' %}
+
+
+        <!-- section start -->
+        <section id="firstSection" class="section-100vh bg-black slider-main-reveal bg-image overlay-black lazy" data-bg="url({% static 'img/Headers/Static/1.jpeg'%})">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div class="row justify-content-center">
+
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="slide-content slide-content-static slide-content-light slide-content-intro text-center">
+                            <p class="slide-subtitle">
+                                <span>EXPERT SAHYOG</span>
+                            </p>
+                            <h1 class="slide-title">
+                                <span>EXPYOG</span>
+                            </h1>
+                            <p class="slide-text text-lead">
+                                <span>
+                                    Expert Sahayog is a motivated and progressive concept conceived by like-minded people, which helps businesses to fulfil all compliance requirements of Indian Laws.
+                                </span>
+                            </p>
+                            <button class="slide-button btn btn-white">know more</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- row end -->
+            </div>
+            <!-- container end -->
+        </section>
+        <!-- section end -->
+
+        <section id="aboutSection" class="intro section-large section-80vh bg-black">
+            <!-- container start -->
+            <div data-animation-container class="container">
+
+                <!-- row start -->
+                <div class="row">
+
+                    <div class="col-lg-10">
+                        <div data-animation-child class="section-title section-title-large slide-up" data-animation="slide-up">
+                            <h2 class="text-white">who we are</h2>
+                        </div>
+
+                        <p data-animation-child class="text-lead text-white slide-up delay-1" data-animation="slide-up">
+                            Expert Sahayog is a motivated and progressive concept conceived by like-minded people, which helps small, medium and large businesses to fulfil all compliance requirements of Indian Laws. It is a platform managed, operated and driven by top-notch CA, CS, IT professionals, Lawyers and Influencers, who have vast experiences into the respective fields. What differentiates us from others is our pricing, TAT, dedicated teams of professionals, whom we call Compliance Managers, digitally advanced platforms for client serving, among other things.
+                        </p>
+
+                        <div data-animation-child class="row slide-up delay-2" data-animation="slide-up">
+                            <div class="col-lg-6 col-md-6">
+                                <p class="intro-text text-white">
+                                    Expyog For those of you who are serious about having more, doing more, giving more and being more, success is achievable with some understanding of what to do, some discipline around planning.
+                                </p>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6">
+                                <p class="intro-text text-white">
+                                    Expyog figure out what you want, put a plan together to achieve it, understand the cost, believe in yourself then!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- row end -->
+                
+            </div>
+            <!-- container end -->
+        </section>
+
+        <!-- section start -->
+        <section id="serviceSection" class="section-large bg-light">
+            <!-- container start -->
+            <div class="container">
+
+                <!-- row start -->
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-9">
+                        <div data-animation-container class="section-title section-title-medium text-center">
+                            <p data-animation-child class="text-additional subtitle slide-right" data-animation="slide-right">services</p>
+                            <h2 data-animation-child class="bg-reveal-dark cover-right delay-1" data-animation="cover-right">
+                                <span>our services</span>
+                            </h2>
+                            <p data-animation-child class="section-text text-black bg-reveal-dark cover-right delay-1" data-animation="cover-right">
+                                <span>
+                                    India's Largest Online Corporate and compliance Services.<br> Expyog figure out what you want, put a plan together to achieve it, understand the cost, believe in yourself then!
+                                </span>
+                            </p>
+                        </div>  
+                    </div>
+                </div>
+                <!-- row end -->
+
+
+                <!-- card-group start -->
+                <div class="card-group card-fullwidth">
+                    <!-- row start -->
+                    <div class="row no-gutters justify-content-center">
+                
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <a data-animation-container href="{% url 'blog' pk='epcg-scheme' %}" class="card-outer cursor-color">
+                                <div class="card bg-gray card-xlarge card-center card-hover-center">
+                                    <div class="card-content">
+                                        <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
+                                            <i class="fas fa-pencil-ruler text-dark-gray"></i>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down delay-2" data-animation="slide-down">
+                                            <h3 class="card-title">EPCG Scheme</h3>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down" data-animation="slide-down">
+                                            <p class="card-text">
+                                                The objective of the EPCG Scheme is to facilitate the import of capital goods for producing quality goods and services and enhance India’s manufacturing competitiveness.
+                                            </p>
+                                        </div>
+    
+                                        <div class="card-btn btn p-0">
+                                            know more
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <a data-animation-container href="#" class="card-outer cursor-color">
+                                <div class="card bg-light card-xlarge card-center card-hover-center">
+                                    <div class="card-content">
+                                        <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
+                                            <i class="fas fa-object-group text-dark-gray"></i>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down delay-2" data-animation="slide-down">
+                                            <h3 class="card-title">Advance Authorisation Scheme</h3>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down" data-animation="slide-down">
+                                            <p class="card-text">
+                                                Advance Authorisation is issued to allow duty-free import of inputs for manufacturing export Products.
+                                            </p>
+                                        </div>
+    
+                                        <div class="card-btn btn p-0">
+                                            know more
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <a data-animation-container href="#" class="card-outer cursor-color">
+                                <div class="card bg-gray card-xlarge card-center card-hover-center">
+                                    <div class="card-content">
+                                        <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
+                                            <i class="fas fa-fill text-dark-gray"></i>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down delay-2" data-animation="slide-down">
+                                            <h3 class="card-title">RoDTEP Scheme</h3>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down" data-animation="slide-down">
+                                            <p class="card-text">
+                                                Remission of Duties or Taxes on Export Products RoDTEP is a Scheme for the Exporters to make Indian products cost-competitive and create a level playing field in the Global Market.
+                                            </p>
+                                        </div>
+    
+                                        <div class="card-btn btn p-0">
+                                            know more
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <a data-animation-container href="#" class="card-outer cursor-color">
+                                <div class="card bg-light card-xlarge card-center card-hover-center">
+                                    <div class="card-content">
+                                        <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
+                                            <i class="fas fa-edit text-dark-gray"></i>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down delay-2" data-animation="slide-down">
+                                            <h3 class="card-title">SEIS Scheme</h3>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down" data-animation="slide-down">
+                                            <p class="card-text">
+                                                The SEIS Scheme or Service Export from India Scheme is an incentive given by the Ministry of Commerce
+                                            </p>
+                                        </div>
+    
+                                        <div class="card-btn btn p-0">
+                                            know more
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <a data-animation-container href="#" class="card-outer cursor-color">
+                                <div class="card bg-gray card-xlarge card-center card-hover-center">
+                                    <div class="card-content">
+                                        <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
+                                            <i class="fas fa-lightbulb text-dark-gray"></i>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down delay-2" data-animation="slide-down">
+                                            <h3 class="card-title">RoSCTL Scheme</h3>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down" data-animation="slide-down">
+                                            <p class="card-text">
+                                                The cabinet approved the RoSCTL Scheme to rebate all embedded state and central taxes for apparel and made-ups.
+                                            </p>
+                                        </div>
+    
+                                        <div class="card-btn btn p-0">
+                                            know more
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <a data-animation-container href="#" class="card-outer cursor-color">
+                                <div class="card bg-light card-xlarge card-center card-hover-center">
+                                    <div class="card-content">
+                                        <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
+                                            <i class="fas fa-brush text-dark-gray"></i>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down delay-2" data-animation="slide-down">
+                                            <h3 class="card-title">AEO Certification</h3>
+                                        </div>
+    
+                                        <div data-animation-child class="slide-down" data-animation="slide-down">
+                                            <p class="card-text">
+                                                The Authorized Economic Operator (AEO) is the status certification granted to an economic operator after fulfilling certain eligibility criteria.
+                                            </p>
+                                        </div>
+    
+                                        <div class="card-btn btn p-0">
+                                            know more
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- card-group end -->
+
+            </div>
+            <!-- container end -->
+        </section>
+        <!-- section end -->
+
+
+        <!-- section start -->
+        <!-- section end -->
+
+
+        <!-- section start -->
+        <section id="testimonialSection" class="testimonials section-medium bg-black">
+            <!-- container start -->
+            <div class="container">
+
+                <!-- row start -->
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-9">
+                        <div data-animation-container class="section-title section-title-small text-center">
+                            <p data-animation-child class="text-additional subtitle slide-right" data-animation="slide-right">testimonials</p>
+                            <h2 data-animation-child class="text-white cover-right delay-1" data-animation="cover-right">
+                                <span>what clients say</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- row end -->
+
+            </div>
+            <!-- container end -->
+
+
+            <!-- container start -->
+            <div class="container mt-100">
+
+                <!-- testimonials-slider start -->
+                <div data-animation-container class="testimonials-card">
+                    <!-- swiper-wrapper start -->
+                    <div class="swiper-wrapper">
+                        
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide slider-slide">
+                            <div class="testimonials-card-item bg-light">
+                                <div data-animation-child class="testimonials-card-img slide-up" data-animation="slide-up">
+                                    <div class="bg-image lazy" data-bg="url({% static 'img/Testimonials/1.jpg'%})"></div>
+                                </div>
+                                <div data-animation-child class="testimonials-card-author text-center slide-up delay-2" data-animation="slide-up">
+                                    <h3 class="text-black">David Walters</h3>
+                                    <p class="text-additional text-theme">graphic designer</p>
+                                </div>
+                                <p data-animation-child class="testimonials-card-comment text-black text-center slide-up delay-3" data-animation="slide-up">
+                                    "After a lot of research and searching  for my company incorporation I found Expert Sahayog. Professional staff of Expert Sahayog assisted me at every step for the formation of my company."
+                                </p>
+                            </div>
+                        </div>
+                        <!-- swiper-slide end -->
+
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide slider-slide">
+                            <div class="testimonials-card-item bg-light">
+                                <div data-animation-child class="testimonials-card-img slide-up" data-animation="slide-up">
+                                    <div class="bg-image lazy" data-bg="url({% static 'img/Testimonials/2.jpg'%})"></div>
+                                </div>
+                                <div data-animation-child class="testimonials-card-author text-center slide-up delay-2" data-animation="slide-up">
+                                    <h3 class="text-black">Owen Tate</h3>
+                                    <p class="text-additional text-theme">developer</p>
+                                </div>
+                                <p data-animation-child class="testimonials-card-comment text-black text-center slide-up delay-3" data-animation="slide-up">
+                                    "A big thank you to team Expert Sahayog, who made compliance process so easy for my company. With the very less time taken for the process, they saved me from heavy penalties."
+                                </p>
+                            </div>
+                        </div>
+                        <!-- swiper-slide end -->
+
+                        <!-- swiper-slide start -->
+                        <div class="swiper-slide slider-slide">
+                            <div class="testimonials-card-item bg-light">
+                                <div data-animation-child class="testimonials-card-img slide-up" data-animation="slide-up">
+                                    <div class="bg-image lazy" data-bg="url({% static 'img/Testimonials/3.jpg'%})"></div>
+                                </div>
+                                <div data-animation-child class="testimonials-card-author text-center slide-up delay-2" data-animation="slide-up">
+                                    <h3 class="text-black">Kurtis Bowman</h3>
+                                    <p class="text-additional text-theme">UX designer</p>
+                                </div>
+                                <p data-animation-child class="testimonials-card-comment text-black text-center slide-up delay-3" data-animation="slide-up">
+                                    "I recommend Exyog, because they have a team of experienced professionals for providing wide range of services like taxation, valuation, financial advisory related consulting for individuals."
+                                </p>
+                            </div>
+                        </div>
+                        <!-- swiper-slide end -->
+
+                    </div>
+                    <!-- swiper-wrapper end -->
+
+
+                    <!-- pagination start -->
+                    <div data-animation-child class="testimonials-pagination pagination pagination-light slide-up delay-4" data-animation="slide-up"></div>
+                    <!-- pagination end -->
+                </div>
+                <!-- testimonials-slider end -->
+
+            </div>
+            <!-- container end -->
+        </section>
+        <!-- section end -->
+
+
+        <!-- section start -->
+        <section id="blogSection" class="section-large bg-light">
+            <!-- container start -->
+            <div class="container">
+
+                <!-- row start -->
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div data-animation-container class="section-title section-title-small text-center">
+                            <p data-animation-child class="text-additional subtitle slide-up" data-animation="slide-up">blog</p>
+                            <h2 data-animation-child class="slide-up delay-1" data-animation="slide-up">our thoughts</h2>
+                        </div>  
+                    </div>
+                </div>
+                <!-- row end -->
+
+
+                <!-- card-group start -->
+                <div class="card-group">
+                    <!-- blog-slider start -->
+                    <div data-animation-container class="blog-slider row no-gutters justify-content-center">
+                        
+                        <!-- swiper-wrapper start -->
+                        <div class="swiper-wrapper">
+                            {% for blog in blog_list %}
+                            <!-- swiper-slide start -->
+                            <div class="swiper-slide">
+                                <div data-animation-container class="blog-slider-outer">
+
+                                    <div class="blog-slider-item border-0">
+                                        <div data-animation-child class="slide-left" data-animation="slide-left">
+                                            {% for cat in blog.categories.all %}
+                                                <a class="blog-card-tag link text-additional text-theme" href="#">{{cat.title}}</a>
+                                            {% endfor %}
+                                        </div>
+                                    
+                                        <div data-animation-child class="slide-up delay-5" data-animation="slide-up">
+                                            <h3 class="blog-card-title text-black">
+                                                {{blog.title}}
+                                            </h3>
+                                        </div>
+
+                                        <div data-animation-child class="slide-up delay-7" data-animation="slide-up">
+                                            <p class="blog-card-text text-dark-gray">
+                                                {{blog.intro}}
+                                            </p>
+                                        </div>
+
+                                        <div data-animation-child class="slide-up delay-7" data-animation="slide-up">
+                                            <p class="blog-slider-date text-dark-gray">
+                                                {{blog.date_created}}
+                                            </p>
+                                        </div>
+
+                                        <a data-swup href="{% url 'blog' pk=blog.slug %}" class="blog-slider-link"></a>
+                                    </div>
+
+                                    <div class="blog-slider-img bg-image lazy" data-bg="url({{blog.image.url}})"></div>
+                                    
+                                </div>
+                            </div>
+                            <!-- swiper-slide end -->
+                            {% endfor %}
+                        </div>
+                        <!-- swiper-wrapper end -->
+
+
+                        <!-- pagination start -->
+                        <div data-animation-child class="blog-slider-pagination pagination pagination-dark slide-up delay-4" data-animation="slide-up"></div>
+                        <!-- pagination end -->
+
+                    </div>
+                    <!-- blog-slider end -->
+                </div>
+                <!-- card-group end -->
+
+            </div>
+            <!-- container end -->
+        </section>
+        <!-- section end -->
+
+        <!-- footer start -->
+        {% include 'footer.html' %}
+        <!-- footer end -->
+
+    </main>
+    <!-- main end -->
+{% endblock content %}

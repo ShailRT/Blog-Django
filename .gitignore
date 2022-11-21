@@ -1,0 +1,9 @@
+# created by virtualenv automatically
+Scripts
+Lib
+pyvenv.cfg
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
