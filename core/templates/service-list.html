@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- main start -->
+    <main id="swup">
+
+        <!-- to-top-button start -->
+        <a href="#firstSection" class="to-top-button to-id click-target">
+            <i class="icon-arrow-left"></i>
+        </a>
+        <!-- to-top-button end -->
+
+
+        <!-- header start -->
+        {% include 'navbar.html' %}
+        <!-- header end -->
+
+
+        
+
+
+        <!-- services page intro start -->
+        <section id="firstSection" class="page-header section-80vh bg-gradient-black">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div class="row">
+                    <div class="col-xl-7 offset-xl-1">
+                        <div class="breadcrumb-wrap">
+                            <ul class="breadcrumb slide-over">
+                                <li class="breadcrumb-item"><a class="link text-white" href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Services</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-11 offset-xl-1">
+                        <h1 class="page-header-title text-white">
+                            <span class="slide-over">Services</span>
+                        </h1>
+                    </div>
+                    <div class="col-xl-7 offset-xl-1">
+                        <p class='page-header-text text-lead text-white'>
+                            <span class="slide-over">This an introduction text. There are many variations of passages of Lorem Ipsum available, but the majority have always free from rep - etition</span>
+                        </p>
+                    </div>
+                </div>
+                <!-- row end -->
+            </div>
+            <!-- container end -->
+
+            <!-- bottom-left-links start -->
+            <div class="bottom-left-links">
+                <div>
+                    <a href="#" class="link text-white">Behance</a>
+                </div>
+                <div>
+                    <a href="#" class="link text-white">FaceBook</a>
+                </div>
+                <div>
+                    <a href="#" class="link text-white">Twitter</a>
+                </div>
+            </div>
+            <!-- bottom-left-links end -->
+        </section>
+        <!-- services page intro end -->
+
+
+        <!-- services page main start -->
+        <div class="page-main">
+
+            <!-- section start -->
+            <section class="section-large bg-light">
+                <div id="particles" class="container">
+                    <!-- container start -->
+                    <div class="container">
+        
+                        <!-- row start -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div data-animation-container class="section-title section-title-medium text-center">
+                                    <p data-animation-child class="text-additional subtitle slide-up" data-animation="slide-up">
+                                        Services
+                                    </p>
+                                    <h2 data-animation-child class="slide-up delay-1" data-animation="slide-up">
+                                        our services
+                                    </h2>
+                                    <p data-animation-child class="section-text slide-up delay-2" data-animation="slide-up">
+                                        India's Largest Online Corporate and compliance Services.
+                                        Expyog figure out what you want, put a plan together to achieve it, understand the cost, believe in yourself then!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- row end -->
+        
+        
+                        <!-- card-group start -->
+                        <div class="card-group">
+                            <!-- row start -->
+                            <div class="row justify-content-center">
+                                {% for service in service_list %}
+                                <div class="col-lg-4 col-md-6">
+                                    <div data-animation-container class="card-outer">
+                                        <a href="{% url 'service' pk=service.slug %}" class="card card-small card-hover bg-gray">
+                                            <div data-animation-child  class="card-img cover-right" data-animation="cover-right">
+                                                <div class="bg-image lazy" data-bg="url({{service.image.url}})"></div>
+                                            </div>
+                                            <div class="card-content">
+                                                <h3 data-animation-child class="card-title slide-right" data-animation="slide-right">
+                                                    {{service.title}}
+                                                </h3>
+                                                <p data-animation-child class="card-text slide-right delay-1" data-animation="slide-right">
+                                                {{service.intro}}
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <!-- row end -->
+                        </div>
+                        <!-- card-group end -->
+        
+                    </div>
+                    <!-- container end -->
+                </div>
+            </section>
+            <!-- section end -->
+
+
+        </div>
+        <!-- services page main end -->
+
+        <!-- footer start -->
+        {% include 'footer.html' %}
+        <!-- footer end -->
+
+    </main>
+    <!-- main end -->
+
+{% endblock content %}

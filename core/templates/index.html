@@ -116,7 +116,7 @@
                     <div class="row no-gutters justify-content-center">
                 
                         <div class="col-lg-4 col-md-6 col-sm-8">
-                            <a data-animation-container href="{% url 'blog' pk='epcg-scheme' %}" class="card-outer cursor-color">
+                            <a data-animation-container href="{% url 'service' pk='epcg-scheme' %}" class="card-outer cursor-color">
                                 <div class="card bg-gray card-xlarge card-center card-hover-center">
                                     <div class="card-content">
                                         <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
@@ -276,9 +276,18 @@
                     <!-- row end -->
                 </div>
                 <!-- card-group end -->
+                <!-- blog-btn-more start -->
+                <div class="blog-btn-more ">
+                    <a href="{% url 'service-list' %}">
+                    <button class="btn btn-large btn-black text-white cursor-color" >Load more</button>
+                    </a>
+                </div>
+                <!-- blog-btn-more end -->
 
             </div>
             <!-- container end -->
+
+            
         </section>
         <!-- section end -->
 

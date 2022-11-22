@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from blog.models import Blog, Lead
+from blog.models import Blog, Lead, Service
 from django.db.models import Q
 
 def index(request):
@@ -27,4 +27,13 @@ def blog_list(request):
         'query': query,
     }
     return render(request, 'blog-list.html', context)
+
+def service_list(request):
+    query = request.GET.get('query', '')
+    service_list = Service.objects.filter(Q(title__icontains=query))
+    context = {
+        'service_list': service_list,
+        'query': query,
+    }
+    return render(request, 'service-list.html', context)
 

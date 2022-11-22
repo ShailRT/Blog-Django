@@ -32,6 +32,20 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
 
+class Service(models.Model):
+    title = models.CharField(max_length=120)
+    intro = models.TextField(blank=True, null=True)
+    slug = models.SlugField()
+    categories = models.ManyToManyField(Category)
+    tags = models.TextField(blank=True, null=True)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='blog')
+    body = RichTextField(blank=True, null=True)
+    date_created = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
 class Lead(models.Model):
     name = models.CharField(max_length=120)
     email = models.CharField(max_length=120)

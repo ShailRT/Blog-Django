@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+
+{% block title %}Expyog - {{service.title}} {% endblock title %}
+
+{% block content %}
+    <!-- main start -->
+    <main id="swup">
+
+        <!-- to-top-button start -->
+        <a href="#firstSection" class="to-top-button to-id click-target">
+            <i class="icon-arrow-left"></i>
+        </a>
+        <!-- to-top-button end -->
+
+
+        <!-- header start -->
+        {% include 'navbar.html' %}
+        <!-- menu-navigation end -->
+
+
+        <!-- blog Article page intro start -->
+        <section id="firstSection" class="page-header section-80vh bg-gradient-black bg-black">
+            <!-- container start -->
+            <div id="particles" class="container">
+                <div class="container">
+                    <!-- row start -->
+                    <div class="row">
+                        <div class="col-xl-7 offset-xl-1">
+                            <div class="breadcrumb-wrap">
+                                <ul class="breadcrumb slide-over">
+                                    <li class="breadcrumb-item"><a class="link text-white" href="{%url 'index'%}">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="link text-white" href="#">Service</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Service Article</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-11 offset-xl-1">
+                            <h1 class="page-header-title text-white">
+                                <span class="slide-over">{{service.title}}</span>
+                            </h1>
+                        </div>
+                        <div class="col-xl-7 offset-xl-1">
+                            <p class='page-header-text text-lead text-white'>
+                                <span class="slide-over">{{service.intro}}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- row end -->
+                </div>
+            </div>
+            <!-- container end -->
+            
+            <!-- bottom-left-links start -->
+            <div class="bottom-left-links">
+                <div>
+                    <a href="#" class="link text-white">Behance</a>
+                </div>
+                <div>
+                    <a href="#" class="link text-white">FaceBook</a>
+                </div>
+                <div>
+                    <a href="#" class="link text-white">Twitter</a>
+                </div>
+            </div>
+            <!-- bottom-left-links end -->
+
+            
+        </section>
+        <!-- blog Article page intro end -->
+
+
+        <!-- blog Article page main start -->
+        <div class="page-main">
+
+            <!-- section start -->
+            <section class="section-small bg-light">
+                <!-- container start -->
+                <div class="container blog-container">
+                    <!-- row start -->
+                    <div class="row">
+    
+                        <div class="col-lg-8">
+                            <!-- blog-item start -->
+                            <div class="blog-item bg-black">
+                                <div class="blog-img">
+                                    <div class="bg-image lazy" data-bg="url({{service.image.url}})"></div>
+                                </div>
+                                <!-- blog-content start -->
+                                <div class="blog-content">
+                                    <div class="blog-header">
+                                        <div class="blog-info">
+                                            <p class="text-additional text-white">
+                                                <a href="#" class="link">{{service.date_created}}</a>
+                                                -
+                                                <a href="#" class="link">{{service.author}}</a>
+                                            </p>
+                                        </div>
+                                        <div class="blog-tags">
+                                            {% for cat in category %}
+                                            <a class="link text-additional" href="#">{{cat.title}}</a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <h3 class="blog-title text-white">{{service.title}}</h3>
+                                    <div class="body-blog">
+                                        {{ service.body|safe }}
+                                    </div>
+                                </div>
+                                <!-- blog-content end -->
+                            </div>
+                            <!-- blog-item end -->
+                            <div class="blog-item bg-black">
+                                <div class="comment-respond">
+                                    <h3 class="comment-reply-title">
+                                        Leave a Reply
+                                        <small><a href="#">cancel reply</a></small>
+                                    </h3>
+                                    <form class="comment-form row" action="." method="POST">
+                                        {% csrf_token %}
+                                        <!-- <div class="logged-in-as col-12">
+                                            <a href="#">Logged in as admin.</a>
+                                            <a href="#">Log out?</a>
+                                        </div> -->
+    
+                                        <div class="comment-notes col-12">
+                                            <span>Your email address will not be published</span>
+                                        </div>
+                                        
+                                        <div class="form-group col-12">
+                                            <input type="text" name="name" placeholder="Name">
+                                        </div>
+    
+                                        <div class="form-group col-md-6">
+                                            <input type="text" name="email" placeholder="Email">
+                                        </div>
+    
+                                        <div class="form-group col-md-6">
+                                            <input type="text" name="phone" placeholder="Phone">
+                                        </div>
+    
+                                        <div class="form-group col-12">
+                                            <textarea name="comment" id="comment" placeholder="Comment" rows="3"></textarea>
+                                        </div>
+    
+                                        <div class="col-12">
+                                            <button type="submit" name="submit" id="submit" class="btn btn-outline-white text-white">Send Feedback</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+    
+                            <!-- blog-item start -->
+                            
+                            <!-- blog-item end -->
+                        </div>
+    
+    
+                        <div class="col-lg-4">
+                            <!-- sidebar start -->
+                            <aside class="sidebar widget_area">
+    
+                                <!-- widget start -->
+                                <div class="widget widget_author p-0">
+                                    <div class="widget-author">
+                                        <div class="bg-image lazy" data-bg="url({{author.image.url}})"></div>
+                                    </div>
+                                    <div class="widget-inner text-center">
+                                        <h3 class="widget-title text-white">{{author.name}}</h3>
+                                        <p class="text-light-gray">
+                                            {{author.intro}}
+                                        </p>
+                                        
+                                        <div class="widget-social social">
+                                            {% if author.twitter %}
+                                                <div class="social-item">
+                                                    <a class="link" href="{{author.twitter}}" target="_blank">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </a>
+                                                </div>
+                                            {% endif %}
+                                            {% if author.instagram %}
+                                                <div class="social-item">
+                                                    <a class="link" href="{{author.instagram}}" target="_blank">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </a>
+                                                </div>
+                                            {% endif %}
+                                            {% if author.youtube %}
+                                                <div class="social-item">
+                                                    <a class="link" href="{{author.youtube}}" target="_blank">
+                                                        <i class="fab fa-youtube"></i>
+                                                    </a>
+                                                </div>
+                                            {% endif %}
+                                            {% if author.linkedin %}
+                                                <div class="social-item">
+                                                    <a class="link" href="{{author.linkedin}}" target="_blank">
+                                                        <i class="fab fa-linkedin-in"></i>
+                                                    </a>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- widget end -->
+    
+    
+                                <!-- widget start -->
+                                
+                                <!-- widget end -->
+    
+    
+                                <!-- widget start -->
+                                <div class="widget widget_categories">
+                                    <h3 class="widget-title text-white">
+                                        categories
+                                    </h3>
+    
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                production
+                                            </a>
+                                            (1)
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                design
+                                            </a>
+                                            (5)
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                UX / UI
+                                            </a>
+                                            (3)
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                                <!-- widget end -->
+    
+    
+                                <!-- widget start -->
+                                
+                                <!-- widget end -->
+    
+    
+                                <!-- widget start -->
+                                
+                                <!-- widget end -->
+    
+    
+                                <!-- widget start -->
+                                
+                                <!-- widget end -->
+    
+    
+                                <!-- widget start -->
+                                <div class="widget widget_tag_cloud">
+                                    <h3 class="widget-title text-white">tags</h3>
+                                    
+                                    <div class="tagcloud">
+                                        {% for tag in tags %}
+                                            <a class="tag-cloud-link" href="#">{{tag}}</a>
+                                        {% endfor %}
+                                        {% comment %} <a class="tag-cloud-link" href="#">artist(2)</a>
+                                        <a class="tag-cloud-link" href="#">nature(2)</a>
+                                        <a class="tag-cloud-link" href="#">business(2)</a>
+                                        <a class="tag-cloud-link" href="#">trade(2)</a>
+                                        <a class="tag-cloud-link" href="#">people(2)</a>
+                                        <a class="tag-cloud-link" href="#">development(2)</a>
+                                        <a class="tag-cloud-link" href="#">graphic design(2)</a>
+                                        <a class="tag-cloud-link" href="#">art(2)</a>
+                                        <a class="tag-cloud-link" href="#">marketing(2)</a> {% endcomment %}
+                                    </div>
+    
+                                </div>
+                                <!-- widget end -->
+    
+    
+                                <!-- widget start -->
+                                
+                                <!-- widget end -->
+    
+                            </aside>
+                            <!-- sidebar end -->
+                        </div>
+    
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- container end -->
+            </section>
+            <!-- section end -->
+
+        </div>
+        <!-- blog Article page main end -->
+
+        <!-- footer start -->
+        {% include 'footer.html' %}
+        <!-- footer end -->
+
+    </main>
+    <!-- main end -->
+{% endblock content %}
