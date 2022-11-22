@@ -288,7 +288,7 @@
 
 
         <!-- section start -->
-        <section id="testimonialSection" class="testimonials section-medium bg-black">
+        <section id="contactSection" class="testimonials section-medium bg-black pb-0">
             <!-- container start -->
             <div class="container">
 
@@ -296,7 +296,7 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-9">
                         <div data-animation-container class="section-title section-title-small text-center">
-                            <p data-animation-child class="text-additional subtitle slide-right" data-animation="slide-right">testimonials</p>
+                            <p data-animation-child class="text-additional subtitle slide-right" data-animation="slide-right">contact us</p>
                             <h2 data-animation-child class="text-white cover-right delay-1" data-animation="cover-right">
                                 <span>what clients say</span>
                             </h2>
@@ -307,7 +307,6 @@
 
             </div>
             <!-- container end -->
-
 
             <!-- container start -->
             <div class="container mt-100">
@@ -380,9 +379,91 @@
 
             </div>
             <!-- container end -->
+
+            <div class="container">
+                <!-- row start -->
+                <div data-animation-container class="form-outer row justify-content-center">
+
+                    <div class="col-lg-10">
+                        <div class="section-title section-title-small text-center">
+                            <h2 data-animation-child class="text-white slide-up" data-animation="slide-up">
+                                Lets get in touch
+                            </h2>
+                        </div>
+                        
+                        <!-- form start -->
+                        <form class="contact-message row" method="POST" action=".">
+                            {% csrf_token %}
+                            <div data-animation-child class="form-group col-md-6 slide-up delay-3" data-animation="slide-up">
+                                <input id="username" type="text" name="name" placeholder="Name">
+                            </div>
+                            <div data-animation-child class="form-group col-md-6 slide-up delay-3" data-animation="slide-up">
+                                <input id="email" type="email" name="email" placeholder="Email">
+                            </div>
+                            <div data-animation-child class="form-group col-12 slide-up delay-4" data-animation="slide-up">
+                                <textarea id="message" name="comment" placeholder="Message" rows="3"></textarea>
+                            </div>
+                            <div data-animation-child class="col-12 text-center slide-up delay-5" data-animation="slide-up">
+                                <button class="btn btn-outline-white text-white" id="submit" type="submit" name="submit">send message</button>
+                            </div>
+                        </form>
+                        <!-- form end -->
+
+                        <div class="output-message-outer">
+                            <div class="output-message text-center alert"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- row end -->
+            </div>
+            
+
+
         </section>
         <!-- section end -->
 
+        {% comment %} <section class="section-large section-medium bg-black bg-image lazy pt-0" data-bg="url(img/Contact/contact.jpg)">
+            <!-- container start -->
+            <div class="container">
+                <!-- row start -->
+                <div data-animation-container class="form-outer row justify-content-center">
+
+                    <div class="col-lg-10">
+                        <div class="section-title section-title-small text-center">
+                            <h2 data-animation-child class="text-white slide-up" data-animation="slide-up">
+                                Lets get in touch
+                            </h2>
+                        </div>
+                        
+                        <!-- form start -->
+                        <form class="contact-message row" method="POST" action=".">
+                            {% csrf_token %}
+                            <div data-animation-child class="form-group col-md-6 slide-up delay-3" data-animation="slide-up">
+                                <input id="username" type="text" name="name" placeholder="Name">
+                            </div>
+                            <div data-animation-child class="form-group col-md-6 slide-up delay-3" data-animation="slide-up">
+                                <input id="email" type="email" name="email" placeholder="Email">
+                            </div>
+                            <div data-animation-child class="form-group col-12 slide-up delay-4" data-animation="slide-up">
+                                <textarea id="message" name="comment" placeholder="Message" rows="3"></textarea>
+                            </div>
+                            <div data-animation-child class="col-12 text-center slide-up delay-5" data-animation="slide-up">
+                                <button class="btn btn-outline-white text-white" id="submit" type="submit" name="submit">send message</button>
+                            </div>
+                        </form>
+                        <!-- form end -->
+
+                        <div class="output-message-outer">
+                            <div class="output-message text-center alert"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- row end -->
+            </div>
+            <!-- container end -->
+        </section> {% endcomment %}
 
         <!-- section start -->
         <section id="blogSection" class="section-large bg-light">

@@ -35,7 +35,7 @@ class Blog(models.Model):
 class Lead(models.Model):
     name = models.CharField(max_length=120)
     email = models.CharField(max_length=120)
-    phone = models.CharField(max_length=120)
+    phone = models.CharField(max_length=120, null=True, blank=True)
     comment = models.TextField(blank=True, null=True)
     blog = models.CharField(max_length=120)
 
