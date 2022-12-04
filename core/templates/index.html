@@ -142,7 +142,7 @@
                         </div>
                 
                         <div class="col-lg-4 col-md-6 col-sm-8">
-                            <a data-animation-container href="#" class="card-outer cursor-color">
+                            <a data-animation-container href="{% url 'service' pk='aa-scheme' %}" class="card-outer cursor-color">
                                 <div class="card bg-light card-xlarge card-center card-hover-center">
                                     <div class="card-content">
                                         <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
@@ -168,7 +168,7 @@
                         </div>
                 
                         <div class="col-lg-4 col-md-6 col-sm-8">
-                            <a data-animation-container href="#" class="card-outer cursor-color">
+                            <a data-animation-container href="{% url 'service' pk='rodtep-scheme' %}" class="card-outer cursor-color">
                                 <div class="card bg-gray card-xlarge card-center card-hover-center">
                                     <div class="card-content">
                                         <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
@@ -195,7 +195,7 @@
 
 
                         <div class="col-lg-4 col-md-6 col-sm-8">
-                            <a data-animation-container href="#" class="card-outer cursor-color">
+                            <a data-animation-container href="{% url 'service' pk='seis-scheme' %}" class="card-outer cursor-color">
                                 <div class="card bg-light card-xlarge card-center card-hover-center">
                                     <div class="card-content">
                                         <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
@@ -221,7 +221,7 @@
                         </div>
 
                         <div class="col-lg-4 col-md-6 col-sm-8">
-                            <a data-animation-container href="#" class="card-outer cursor-color">
+                            <a data-animation-container href="{% url 'service' pk='rosctl-scheme' %}" class="card-outer cursor-color">
                                 <div class="card bg-gray card-xlarge card-center card-hover-center">
                                     <div class="card-content">
                                         <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
@@ -247,7 +247,7 @@
                         </div>
 
                         <div class="col-lg-4 col-md-6 col-sm-8">
-                            <a data-animation-container href="#" class="card-outer cursor-color">
+                            <a data-animation-container href="{% url 'service' pk='meis-scheme' %}" class="card-outer cursor-color">
                                 <div class="card bg-light card-xlarge card-center card-hover-center">
                                     <div class="card-content">
                                         <div data-animation-child class="card-icon slide-down delay-4" data-animation="slide-down">
@@ -255,12 +255,12 @@
                                         </div>
     
                                         <div data-animation-child class="slide-down delay-2" data-animation="slide-down">
-                                            <h3 class="card-title">AEO Certification</h3>
+                                            <h3 class="card-title">MEIS Scheme</h3>
                                         </div>
     
                                         <div data-animation-child class="slide-down" data-animation="slide-down">
                                             <p class="card-text">
-                                                The Authorized Economic Operator (AEO) is the status certification granted to an economic operator after fulfilling certain eligibility criteria.
+                                                The MEIS Scheme Provides incentive in the form of a Duty credit scrip or MEIS License which can be used in payment of import duties or can be sold in the open market for a premium rate.
                                             </p>
                                         </div>
     
@@ -492,7 +492,7 @@
 
 
                 <!-- card-group start -->
-                <div class="card-group">
+                <div class="card-group pb-0">
                     <!-- blog-slider start -->
                     <div data-animation-container class="blog-slider row no-gutters justify-content-center">
                         
@@ -550,8 +550,17 @@
                 </div>
                 <!-- card-group end -->
 
+                <!-- blog-btn-more start -->
+                <div class="blog-btn-more pt-0 mt-5">
+                    <a href="{% url 'blog-list' %}">
+                    <button class="btn btn-large btn-black text-white cursor-color" >Load more</button>
+                    </a>
+                </div>
+                <!-- blog-btn-more end -->
+
             </div>
             <!-- container end -->
+
         </section>
         <!-- section end -->
 
