@@ -25,7 +25,7 @@
                         <div class="col-xl-7 offset-xl-1">
                             <div class="breadcrumb-wrap">
                                 <ul class="breadcrumb slide-over">
-                                    <li class="breadcrumb-item"><a class="link text-white" href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="link text-white" href="{% url 'index' %}">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Blog</li>
                                 </ul>
                             </div>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-xl-7 offset-xl-1">
                             <p class='page-header-text text-lead text-white'>
-                                <span class="slide-over">This an introduction text. There are many variations of passages of Lorem Ipsum available, but the majority have always free from rep - etition</span>
+                                <span class="slide-over">Expert Sahyog provides you with latest information by means of our blogs,<br> You can browse all of those blog here</span>
                             </p>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                 <!-- container end -->
             </div>
             <!-- bottom-left-links start -->
-            {% comment %} <div class="bottom-left-links">
+            <div class="bottom-left-links">
                 <div>
                     <a href="#" class="link text-white">Behance</a>
                 </div>
@@ -56,7 +56,7 @@
                 <div>
                     <a href="#" class="link text-white">Twitter</a>
                 </div>
-            </div> {% endcomment %}
+            </div> 
             <!-- bottom-left-links end -->
         </section>
         <!-- blog page intro end -->
@@ -77,7 +77,7 @@
                             {% for blog in blog_list %}
                             <!-- blog-item start -->
                             <div data-animation-container class="blog-item bg-black">
-                                <a data-animation-child data-swup href="blogArticle.html" class="blog-img blog-img-hover cover-right" data-animation="cover-right">
+                                <a data-animation-child data-swup href="{% url 'blog' pk=blog.slug %}" class="blog-img blog-img-hover cover-right" data-animation="cover-right">
                                     <div class="bg-image lazy" data-bg="url({{blog.image.url}})"></div>
                                 </a>
                                 <!-- blog-content start -->
@@ -112,9 +112,9 @@
                             
     
                             <!-- blog-btn-more start -->
-                            <div class="blog-btn-more">
+                            {% comment %} <div class="blog-btn-more">
                                 <button class="btn btn-large btn-black text-white cursor-color">Load more</button>
-                            </div>
+                            </div> {% endcomment %}
                             <!-- blog-btn-more end -->
                         </div>
                         <!-- posts end -->
@@ -145,24 +145,15 @@
                                     </h3>
     
                                     <ul>
+                                        {% for category in categories %}
                                         <li>
                                             <a href="#">
-                                                production
+                                                {{category.title}}
                                             </a>
-                                            (1)
+                                            
                                         </li>
-                                        <li>
-                                            <a href="#">
-                                                design
-                                            </a>
-                                            (5)
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                UX / UI
-                                            </a>
-                                            (3)
-                                        </li>
+                                        {% endfor %}
+                                        
                                     </ul>
                                     
                                 </div>
@@ -174,18 +165,12 @@
                                     <h3 class="widget-title text-white">recent posts</h3>
     
                                     <ul>
+                                        {% for blog in blog_list %}
                                         <li>
-                                            <a href="#">5 innovative approaches to improve your development</a>
-                                            <span class="post-date">March 31, 2019</span>
+                                            <a href="{% url 'blog' pk=blog.slug %}">{{blog.title}}</a>
+                                            <span class="post-date">{{blog.date_created}}</span>
                                         </li>
-                                        <li>
-                                            <a href="#">Seven Features Of Design That Make Everyone Love It</a>
-                                            <span class="post-date">June 20, 2017</span>
-                                        </li>
-                                        <li>
-                                            <a href="#">How Product Design is different than UX Design</a>
-                                            <span class="post-date">Feb 18, 2018</span>
-                                        </li>
+                                        {% endfor %}
                                     </ul>
     
                                 </div>

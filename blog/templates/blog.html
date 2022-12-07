@@ -29,7 +29,7 @@
                             <div class="breadcrumb-wrap">
                                 <ul class="breadcrumb slide-over">
                                     <li class="breadcrumb-item"><a class="link text-white" href="{%url 'index'%}">Home</a></li>
-                                    <li class="breadcrumb-item"><a class="link text-white" href="#">Blog</a></li>
+                                    <li class="breadcrumb-item"><a class="link text-white" href="{% url 'blog-list' %}">Blog</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">Blog Article</li>
                                 </ul>
                             </div>
@@ -49,6 +49,19 @@
                 </div>
             </div>
             <!-- container end -->
+            <!-- bottom-left-links start -->
+            <div class="bottom-left-links">
+                <div>
+                    <a href="#" class="link text-white">Behance</a>
+                </div>
+                <div>
+                    <a href="#" class="link text-white">FaceBook</a>
+                </div>
+                <div>
+                    <a href="#" class="link text-white">Twitter</a>
+                </div>
+            </div> 
+            <!-- bottom-left-links end -->
 
             
         </section>
