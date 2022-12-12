@@ -30,7 +30,7 @@
                                 <ul class="breadcrumb slide-over">
                                     <li class="breadcrumb-item"><a class="link text-white" href="{%url 'index'%}">Home</a></li>
                                     <li class="breadcrumb-item"><a class="link text-white" href="{% url 'blog-list' %}">Blog</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Blog Article</li>
+                                    <li class="breadcrumb-item active" aria-current="page">{{blog.slug|capfirst}}</li>
                                 </ul>
                             </div>
                         </div>
@@ -47,20 +47,21 @@
                     </div>
                     <!-- row end -->
                 </div>
+                <div class="bottom-left-links">
+                    <div>
+                        <a href="https://www.facebook.com/Expert-sahayog-112473631493509" class="link text-white">FaceBook</a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/expert_sahayog" class="link text-white">InstaGram</a>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/expert-sahayog-9783b2241" class="link text-white">LinkedIn</a>
+                    </div>
+                </div>
             </div>
             <!-- container end -->
             <!-- bottom-left-links start -->
-            <div class="bottom-left-links">
-                <div>
-                    <a href="#" class="link text-white">Behance</a>
-                </div>
-                <div>
-                    <a href="#" class="link text-white">FaceBook</a>
-                </div>
-                <div>
-                    <a href="#" class="link text-white">Twitter</a>
-                </div>
-            </div> 
+            
             <!-- bottom-left-links end -->
 
             
@@ -80,7 +81,7 @@
     
                         <div class="col-lg-8">
                             <!-- blog-item start -->
-                            <div class="blog-item bg-black">
+                            <div class="blog-item bg-additional">
                                 <div class="blog-img">
                                     <div class="bg-image lazy" data-bg="url({{blog.image.url}})"></div>
                                 </div>
@@ -88,20 +89,20 @@
                                 <div class="blog-content">
                                     <div class="blog-header">
                                         <div class="blog-info">
-                                            <p class="text-additional text-white">
-                                                <a href="#" class="link">{{blog.date_created}}</a>
+                                            <p class="text-additional text-black">
+                                                <a href="#" class="link text-black">{{blog.date_created}}</a>
                                                 -
-                                                <a href="#" class="link">{{blog.author}}</a>
+                                                <a href="#" class="link text-black">{{blog.author}}</a>
                                             </p>
                                         </div>
                                         <div class="blog-tags">
                                             {% for cat in category %}
-                                            <a class="link text-additional" href="#">{{cat.title}}</a>
+                                            <a class="link text-black" href="#">{{cat.title}}</a>
                                             {% endfor %}
                                         </div>
                                     </div>
-                                    <h3 class="blog-title text-white">{{blog.title}}</h3>
-                                    <div class="body-blog">
+                                    <h3 class="blog-title text-black">{{blog.title}}</h3>
+                                    <div class="body-blog text-black">
                                         {{ blog.body|safe }}
                                     </div>
                                 </div>
@@ -216,24 +217,15 @@
                                     </h3>
     
                                     <ul>
+                                        {% for category in all_category%}
                                         <li>
                                             <a href="#">
-                                                production
+                                                {{category.title}}
                                             </a>
                                             (1)
                                         </li>
-                                        <li>
-                                            <a href="#">
-                                                design
-                                            </a>
-                                            (5)
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                UX / UI
-                                            </a>
-                                            (3)
-                                        </li>
+                                        {% endfor %}
+                                        
                                     </ul>
                                     
                                 </div>

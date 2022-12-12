@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Blog, Lead, Service
+from .models import Blog, Lead, Service, Category
 
 def blog(request, pk):
     if request.method=="POST":
@@ -16,11 +16,13 @@ def blog(request, pk):
     else:
         blog = Blog.objects.filter(slug=pk).first()
         category = blog.categories.all()
+        all_category = Category.objects.all()[:3]
         author = blog.author
         tags = blog.tags.split(', ')
         context = {
             'blog': blog,
             'category': category,
+            'all_category': all_category,
             'author': author,
             'tags': tags
         }
@@ -43,9 +45,11 @@ def service(request, pk):
         category = service.categories.all()
         author = service.author
         tags = service.tags.split(', ')
+        all_category = Category.objects.all()[:3]
         context = {
             'service': service,
             'category': category,
+            'all_category': all_category,
             'author': author,
             'tags': tags
         }
