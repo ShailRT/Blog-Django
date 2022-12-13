@@ -941,7 +941,7 @@ p {
 .header {
   position: absolute;
   top: 0;
-  padding: 35px 70px;
+  padding: 20px 70px;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7062,4 +7062,12 @@ iframe {
   font-weight: 500;
   background-color: transparent;
   padding: 12px 15px;
+}
+
+.logo-img{
+  height: 3.5em;
+}
+
+.footer-logo{
+  height: 2em;
 }
