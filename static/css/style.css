@@ -7065,7 +7065,7 @@ iframe {
 }
 
 .logo-img{
-  height: 3.5em;
+  max-height: 3.5em;
 }
 
 .footer-logo{
