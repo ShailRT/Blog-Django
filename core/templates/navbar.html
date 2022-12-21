@@ -77,23 +77,20 @@
             <!-- navigation start -->
             <nav class="navigation">
                 <ul class="navigation-list">
-                    <li>
-                        <a href="#firstSection">Home</a>
+                    <li class="active">
+                        <a href="{% url 'index' %}#firstSection">Home</a>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="{% url 'index' %}#aboutSection">About</a>
                     </li>
                     <li>
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="{% url 'service-list'%}#serviceSection">Service</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a href="{% url 'index'%}#contactSection">Contact</a>
                     </li>
                     <li>
-                        <a href="#pricing">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
+                        <a href="{% url 'blog-list'%}#blogSection">Blogs</a>
                     </li>
                 </ul>
             </nav>
@@ -103,23 +100,18 @@
             <!-- social start -->
             <div class="social social-navigation">
                 <div class="social-item">
-                    <a class="text-white" href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-                <div class="social-item">
-                    <a class="text-white" href="#">
+                    <a class="text-white" href="https://www.instagram.com/expert_sahayog" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
                 <div class="social-item">
-                    <a class="text-white" href="#">
-                        <i class="fab fa-youtube"></i>
+                    <a class="text-white" href="https://www.linkedin.com/in/expert-sahayog-9783b2241" target="_blank">
+                        <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
                 <div class="social-item">
-                    <a class="text-white" href="#">
-                        <i class="fab fa-linkedin-in"></i>
+                    <a class="text-white" href="https://www.facebook.com/Expert-sahayog-112473631493509" target="_blank">
+                        <i class="fab fa-facebook"></i>
                     </a>
                 </div>
             </div>
