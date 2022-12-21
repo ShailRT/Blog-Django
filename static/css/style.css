@@ -6770,7 +6770,7 @@ iframe {
     margin-top: 120px;
   }
   .widget-author {
-    padding-bottom: 70% !important;
+    padding-bottom: 10% !important;
   }
   .portfolio-slider-column-item:hover::after {
     opacity: 0;
